@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+    Events
+    <hr>
+    {% for event in event_list %}
+        <div class="event">
+            <div class="pk">PK:{{ event.pk }}</div>
+            <div class="title">Name: {{ event.name }}</div>
+            <div class="type">Type:{{ event.type }}</div>
+
+            <button class="btn btn-primary"><a href="{% url 'edit-event' event.pk %}">Edit</a></button>
+        </div>
+        <hr>
+    {% endfor %}
+{% endblock %}

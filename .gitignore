@@ -2,4 +2,8 @@
 db.sqlite3
 venv/
 trigger/migrations/
+trigger/__pycache__/
+dates/__pycache__/
+doubleDB/__pycache__/
+doubleDB/doubleDB/__pycache__/
 dates/migrations/

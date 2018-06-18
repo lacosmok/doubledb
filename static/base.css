@@ -1,0 +1,13 @@
+.event {
+   display: inline-flex;
+    margin: 5px 10px;
+
+}
+
+.event > * {
+    margin: 0 10px;
+}
+
+.btn> a {
+    text-decoration: none;
+}

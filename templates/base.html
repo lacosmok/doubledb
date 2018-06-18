@@ -1,0 +1,21 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Double DB Project</title>
+    <link rel="stylesheet" href="{% static '/base.css' %}">
+</head>
+<body>
+<div class="navbar">
+    <ul>
+        <li><a href="{% url 'full-list' %}">Full List</a></li>
+        <li><a href="{% url 'index' %}">Default List</a></li>
+        <li><a href="{% url 'create-event' %}">Create Event</a></li>
+    </ul>
+</div>
+{% block content %}
+{% endblock %}
+</body>
+</html>
