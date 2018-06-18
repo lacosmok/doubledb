@@ -79,7 +79,7 @@ DATABASES = {
     },
     'seconddb': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'seconddb',
+        'NAME': 'secondary',
         'USER': 'root',
         'PASSWORD': 'administrator',
         'HOST': '127.0.0.1',

@@ -3,15 +3,16 @@
 {% load i18n %}
 
 {% block content %}
-    Events
+    <div class="event-title">Models</div>
     <hr>
-    {% for event in event_list %}
+    {% for example_model in examplemodel_list %}
         <div class="event">
-            <div class="pk">PK:{{ event.pk }}</div>
-            <div class="title">Name: {{ event.name }}</div>
-            <div class="type">Type:{{ event.type }}</div>
+            <div class="pk">PK:{{ example_model.pk }}</div>
+            <div class="title">Name: {{ example_model.name }}</div>
+            <div class="type">Type:{{ example_model.type }}</div>
 
-            <button class="btn btn-primary"><a href="{% url 'edit-event' event.pk %}">Edit</a></button>
+            <button class="btn btn-primary"><a href="{% url 'edit-example-model' example_model.pk %}">Edit</a></button>
+            <button class="btn btn-primary"><a href="{% url 'delete-example-model' example_model.pk %}">Delete</a></button>
         </div>
         <hr>
     {% endfor %}

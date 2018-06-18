@@ -1,3 +1,4 @@
+
 class PrimaryRouter:
     def db_for_read(self, model, **hints):
         """
@@ -9,13 +10,11 @@ class PrimaryRouter:
         """
         Writes always go to primary.
         """
-        print(hints['instance'].type)
-        if hints['instance'].type == 0:
+        # print(hints['instance'].type)
+        if hints['instance'].default_database:
             return 'default'
-        elif hints['instance'].type == 1:
-            return 'seconddb'
         else:
-            return 'default'
+            return 'seconddb'
 
     def allow_relation(self, obj1, obj2, **hints):
         """
@@ -28,3 +27,5 @@ class PrimaryRouter:
         All non-auth models end up in this pool.
         """
         return True
+
+
